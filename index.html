@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Поздравление для Ирины</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background: radial-gradient(circle at top, #1a1a2e, #0f3460, #16213e);
+            overflow: hidden;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+
+        /* Звезды */
+        .stars {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: transparent;
+            box-shadow: 
+                20px 30px white,
+                100px 150px white,
+                200px 80px white,
+                300px 200px white,
+                400px 120px white,
+                500px 300px white,
+                600px 50px white,
+                700px 220px white,
+                800px 140px white,
+                900px 90px white;
+            animation: twinkle 3s infinite alternate;
+        }
+
+        @keyframes twinkle {
+            from { opacity: 0.3; }
+            to { opacity: 1; }
+        }
+
+        .card {
+            position: relative;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 40px;
+            border-radius: 20px;
+            text-align: center;
+            max-width: 500px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            animation: fadeIn 2s ease;
+        }
+
+        h1 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.5;
+        }
+
+        button {
+            margin-top: 25px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 10px;
+            background: #4da6ff;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #1f7ae0;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+<div class="stars"></div>
+
+<div class="card">
+    <h1>С Днём Рождения, Ирина!</h1>
+    <p>
+        Желаю тебе отличного настроения, удачи во всех делах  
+        и чтобы каждый день приносил что-то хорошее ✨
+    </p>
+    <p>
+        Пусть всё задуманное обязательно сбудется!
+    </p>
+
+    <button onclick="showMessage()">Нажми 🎁</button>
+</div>
+
+<script>
+    function showMessage() {
+        alert("Хорошего тебе дня и отличного года! 🎉");
+    }
+</script>
+
+</body>
+</html>
